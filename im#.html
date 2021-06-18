@@ -1,0 +1,1192 @@
+<html lang="ko" class="ui-mobile">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="stylesheet" type="text/css" href="cid:css-1e3a8b99-d2c3-4b1c-9760-41c20f2ed2ed@mhtml.blink" />
+      <link rel="stylesheet" type="text/css" href="cid:css-f557dce4-6f10-498e-b587-219db5eddc23@mhtml.blink" />
+      <base href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#lif_ebz_ims_06010_0001">
+      <title>IM샵</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" type="text/css" href="https://mbanking.dgb.co.kr/mTranskeyWeb/transkey_dgb.css?v=20210531092802">
+      <link rel="stylesheet" href="https://mbanking.dgb.co.kr/css/sbs/sbsCommon/commonui.css?v=20210531092802">
+      <link rel="stylesheet" href="https://www.dgb.co.kr/cms/css/project_cms/dgb_project_cms.css?v=20210531092802">
+      <link rel="stylesheet" href="https://www.dgb.co.kr/cms/css/project_cms/dgb_project_robo.css?v=20210531092802">
+        <!--  Chart.js 임포팅     -->
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.esm.js"></script>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/helpers.esm.js"></script>
+   </head>
+   <body class="ui-mobile-viewport imshop-footer" style="">
+      <header id="header" class="_DGB_IMS_HEADER" style="top: 0px;" aria-hidden="false">
+         <div class="top">
+            <h1 class="imshop" id="_DGB_IMS_HEADER_LOGO" style="display: none;"><a class="ui-link">iM#</a></h1>
+            <button type="button" data-role="none" class="cmm-btn-header-back IMS_HEADER_BACK" id="_DGB_COM_HEADER_BACK" style="visibility: visible; display: block;">이전 화면으로 이동</button>
+            <a class="cmm-btn-header-close" style="display:none;">Close</a>
+            <button type="button" data-role="none" class="cmm-btn-header-digital" id="_DGB_IMS_HEADER_DIGITAL" style="display: none;">디지털존</button>
+            <button type="button" data-role="none" class="cmm-btn-header-home" id="_DGB_IMS_HEADER_HOME" style="display: inline-block;">홈</button>
+            <!-- <button type="button" data-role="none" class="cmm-btn-header-notice" id="_DGB_IMS_HEADER_NOTICE">알림</button> -->
+            <button type="button" data-role="none" class="cmm-btn-header-search" id="_DGB_IMS_HEADER_SEARCH">단어검색</button>
+            <button type="button" data-role="none" class="cmm-btn-header-menu" id="_DGB_IMS_HEADER_MENU">메인메뉴</button>
+         </div>
+         <div class="bottom" id="_DGB_IMB_HEADER_TITLE_AREA" style="display: block;">
+            <h1 class="tit"><span id="_DGB_IMB_HEADER_TITLE">가맹점 매출분석</span></h1>
+         </div>
+      </header>
+      <footer id="footer" class="imshop-dock-menu new" style="" aria-hidden="false">
+         <a data-role="none" id="_DGB_IMS_BTN_SHOP" class="btn-shop">주변샵</a>
+         <a data-role="none" id="_DGB_IMS_BTN_PAY" class="btn-pay">제로페이</a>
+         <a data-role="none" id="_DGB_IMS_BTN_LOVE" class="btn-love">지역상품권</a>
+         <a data-role="none" id="_DGB_IMS_BTN_HOPE" class="btn-hope">댓글기부</a>
+         <a data-role="none" id="_DGB_IMS_BTN_IMBANK" class="btn-bank2"><span>IM뱅크</span></a>
+      </footer>
+
+      <div data-role="page" id="lif_ebz_ims_06010_0001" data-script="/js/ims/lif/lif_ebz_ims_06010_0001.js" data-ui-cate="imshop" data-ui-menu="finance" data-ui-title="카드소비분석" data-url="lif_ebz_ims_06010_0001" class="ui-page ui-page-theme-basic ui-page-active" style="position: initial;">
+         <section id="content" style="top: 0px; padding-top: 96px;">
+            <div class="imshop-analysis">
+               <div class="top-box">
+                  <div role="tablist" class="tabmenu">
+                     <button type="button" data-role="none" role="tab" aria-selected="true" aria-controls="tabPanel1" id="tabBtn1" class="active">사용금액</button>
+                     <button type="button" data-role="none" role="tab" aria-selected="false" aria-controls="tabPanel2" id="tabBtn2" class="">요일별</button>
+                     <button type="button" data-role="none" role="tab" aria-selected="false" aria-controls="tabPanel3" id="tabBtn3" class="">TOP10</button>
+                     <button type="button" data-role="none" role="tab" aria-selected="false" aria-controls="tabPanel4" id="tabBtn4" class="">업종별</button>
+                     <button type="button" data-role="none" role="tab" aria-selected="false" aria-controls="tabPanel5" id="tabBtn5" class="">지역별</button>
+                     <button type="button" data-role="none" role="tab" aria-selected="false" aria-controls="tabPanel6" id="tabBtn6" class="">카드안내</button>
+                     <button type="button" data-role="none" role="tab" aria-selected="false" aria-controls="tabPanel7" id="tabBtn7" class="">HOT IM샵</button>
+                     <button type="button" data-role="none" role="tab" aria-selected="false" aria-controls="tabPanel8" id="tabBtn8" class="">인기가맹점</button>
+                  </div>
+               </div>
+               <!-- // top-box -->
+               <div class="tab-contents">
+                  <div role="tabpanel" aria-labelledby="tabBtn1" id="tabPanel1" class="con1 active">
+                     <h2>
+                        사용금액
+                        <span class="cmm-tooltip caution" data-ui-toggle="box">
+                           <button type="button" data-role="none" class="cmm-btn-tooltip">안내</button>
+                           <div class="cmm-layer-round" data-ui-toggle="view">
+                              <button type="button" data-role="none" class="btn-close">닫기</button>
+                              <ul class="cmm-text-dot">
+                                 <li>위 정보는 대구은행 BC카드 승인데이터를 기준으로 합니다. </li>
+                                 <li>회원평균은 이용 월 기준입니다.</li>
+                                 <li>월초의 경우 데이터 집계에 오차가 있을 수 있습니다.</li>
+                              </ul>
+                           </div>
+                        </span>
+                     </h2>
+                     <div class="con">
+                        <div class="info-sort">
+                           <div class="sort">
+                              <button type="button" data-role="none" data-name="age" class="btn-sort active">40대(남)</button>
+                              <button type="button" data-role="none" data-name="area" class="btn-sort">경산시</button>
+                              <button type="button" data-role="none" data-name="all" class="btn-sort">전체고객</button>
+                           </div>
+                           <div class="cmm-form">
+                              <div class="ui-select">
+                                 <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" role="button" id="select-9-button" aria-haspopup="true" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" title="조회 월을 선택하세요"><span class="monthSel">2021년 05월</span></a>
+                                 <select data-native-menu="false" title="조회 월을 선택하세요" data-chartindex="0" class="monthSel" tabindex="-1">
+                                    <option value="202105">2021년 05월</option>
+                                    <option value="202104">2021년 04월</option>
+                                    <option value="202103">2021년 03월</option>
+                                    <option value="202102">2021년 02월</option>
+                                    <option value="202101">2021년 01월</option>
+                                    <option value="202012">2020년 12월</option>
+                                 </select>
+                                 <div style="display: none;" id="select-9-listbox1-placeholder">
+                                    <!-- placeholder for select-9-listbox1 -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                         <div class="chart-box">
+                             <div class="tit">매출 데이터</div>
+                             <ul class="txt">
+<!--                                 <li class="con1_title">최근 <span>5</span>개월 나의 카드이용 평균금액 <em id="TOT_BAL">1,139,978.8</em>원</li>-->
+                                 <canvas id="myChart" width="400" height="400"></canvas>
+                                 <script>
+                                     var ctx = document.getElementById('myChart');
+                                     var myChart = new Chart(ctx, {
+                                         type: 'bar',
+                                         data: {
+                                             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                             datasets: [{
+                                                 label: '# of Votes',
+                                                 data: [12, 19, 3, 5, 2, 3],
+                                                 backgroundColor: [
+                                                     'rgba(255, 99, 132, 0.2)',
+                                                     'rgba(54, 162, 235, 0.2)',
+                                                     'rgba(255, 206, 86, 0.2)',
+                                                     'rgba(75, 192, 192, 0.2)',
+                                                     'rgba(153, 102, 255, 0.2)',
+                                                     'rgba(255, 159, 64, 0.2)'
+                                                 ],
+                                                 borderColor: [
+                                                     'rgba(255, 99, 132, 1)',
+                                                     'rgba(54, 162, 235, 1)',
+                                                     'rgba(255, 206, 86, 1)',
+                                                     'rgba(75, 192, 192, 1)',
+                                                     'rgba(153, 102, 255, 1)',
+                                                     'rgba(255, 159, 64, 1)'
+                                                 ],
+                                                 borderWidth: 1
+                                             }]
+                                         },
+                                         options: {
+                                             scales: {
+                                                 y: {
+                                                     beginAtZero: true
+                                                 }
+                                             }
+                                         }
+                                     });
+                                 </script>
+                             </ul>
+                         </div>
+
+                         <div class="chart-box">
+                             <div class="tit">매출 데이터2</div>
+                             <ul class="txt">
+                                 <canvas id="myChart2" width="400" height="400"></canvas>
+                                 <script>
+                                     var ctx = document.getElementById('myChart2');
+                                     var myChart = new Chart(ctx, {
+                                         type: 'line',
+                                         data: {
+                                             labels: ["1월","2월","3월","4월","5월","6월","7월"],
+                                             datasets: [{
+                                                 label: 'My First Dataset',
+                                                 data: [65, 59, 80, 81, 56, 55, 40],
+                                                 fill: false,
+                                                 borderColor: 'rgb(75, 192, 192)',
+                                                 tension: 0.1
+                                             }]
+                                         }
+                                     });
+                                 </script>
+                             </ul>
+                         </div>
+
+                         <div class="chart-box">
+                             <div class="tit">매출 데이터3</div>
+                             <ul class="txt">
+                                 <canvas id="myChart3" width="400" height="700"></canvas>
+                                 <script>
+                                     var ctx = document.getElementById('myChart3');
+                                     var myChart = new Chart(ctx, {
+                                         type: 'radar',
+                                         data: {
+                                             labels: [
+                                                 'Eating',
+                                                 'Drinking',
+                                                 'Sleeping',
+                                                 'Designing',
+                                                 'Coding',
+                                                 'Cycling',
+                                                 'Running'
+                                             ],
+                                             datasets: [{
+                                                 label: 'My First Dataset',
+                                                 data: [65, 59, 90, 81, 56, 55, 40],
+                                                 fill: true,
+                                                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                                 borderColor: 'rgb(255, 99, 132)',
+                                                 pointBackgroundColor: 'rgb(255, 99, 132)',
+                                                 pointBorderColor: '#fff',
+                                                 pointHoverBackgroundColor: '#fff',
+                                                 pointHoverBorderColor: 'rgb(255, 99, 132)'
+                                             }, {
+                                                 label: 'My Second Dataset',
+                                                 data: [28, 48, 40, 19, 96, 27, 100],
+                                                 fill: true,
+                                                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                                                 borderColor: 'rgb(54, 162, 235)',
+                                                 pointBackgroundColor: 'rgb(54, 162, 235)',
+                                                 pointBorderColor: '#fff',
+                                                 pointHoverBackgroundColor: '#fff',
+                                                 pointHoverBorderColor: 'rgb(54, 162, 235)'
+                                             }]
+                                         },
+                                         options: {
+                                             elements: {
+                                                 line: {
+                                                     borderWidth: 3
+                                                 }
+                                             }
+                                         }
+                                     });
+                                 </script>
+                             </ul>
+                         </div>
+
+                         <div class="chart-box">
+                             <div class="tit">매출 데이터4</div>
+                             <ul class="txt">
+                                 <canvas id="myChart4" width="400" height="700"></canvas>
+                                 <script>
+                                     var ctx = document.getElementById('myChart4');
+                                     var myChart = new Chart(ctx, {
+                                         type: 'doughnut',
+                                         data: {
+                                             labels: [
+                                                 'Red',
+                                                 'Blue',
+                                                 'Yellow'
+                                             ],
+                                             datasets: [{
+                                                 label: 'My First Dataset',
+                                                 data: [300, 50, 100],
+                                                 backgroundColor: [
+                                                     'rgb(255, 99, 132)',
+                                                     'rgb(54, 162, 235)',
+                                                     'rgb(255, 205, 86)'
+                                                 ],
+                                                 hoverOffset: 4
+                                             }]
+                                         }
+                                     });
+                                 </script>
+                             </ul>
+                         </div>
+
+                         <div class="chart-box">
+                             <div class="tit">매출 데이터5</div>
+                             <ul class="txt">
+                                 <canvas id="myChart5" width="400" height="700"></canvas>
+                                 <script>
+                                     var ctx = document.getElementById('myChart5');
+                                     var myChart = new Chart(ctx, {
+                                         type: 'polarArea',
+                                         data: {
+                                             labels: [
+                                                 'Red',
+                                                 'Green',
+                                                 'Yellow',
+                                                 'Grey',
+                                                 'Blue'
+                                             ],
+                                             datasets: [{
+                                                 label: 'My First Dataset',
+                                                 data: [11, 16, 7, 3, 14],
+                                                 backgroundColor: [
+                                                     'rgb(255, 99, 132)',
+                                                     'rgb(75, 192, 192)',
+                                                     'rgb(255, 205, 86)',
+                                                     'rgb(201, 203, 207)',
+                                                     'rgb(54, 162, 235)'
+                                                 ]
+                                             }]
+                                         }
+                                     });
+                                 </script>
+                             </ul>
+                         </div>
+
+
+                        <!-- // sort-box -->
+                        <div class="chart-box">
+                           <div class="tit">이용금액</div>
+                           <ul class="txt">
+                              <li class="nodata" style="display:none;">고객님의 대구은행 BC카드 이용내역이 없습니다.</li>
+                              <li class="con1_title">최근 <span>5</span>개월 나의 카드이용 평균금액 <em id="TOT_BAL">1,139,978.8</em>원</li>
+                           </ul>
+                           <div class="chart animate" data-scroll="0.7">
+                              <div class="chartjs-size-monitor">
+                                 <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                 </div>
+                                 <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                 </div>
+                              </div>
+                              <canvas id="chartUseCard" style="display: block; height: 194px; width: 294px;" width="588" height="388" class="chartjs-render-monitor"></canvas>
+                              <div class="legend"></div>
+                           </div>
+                        </div>
+                        <div class="table-box">
+                           <div class="tit">이용건수</div>
+                           <table>
+                              <caption>사용금액을 구분, 나의이용건수, 동연령대 이용건수를 나타낸 표</caption>
+                              <colgroup>
+                                 <col style="width:33.333444%">
+                                 <col style="width:33.333444%">
+                                 <col style="width:33.333444%">
+                              </colgroup>
+                              <thead>
+                                 <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">MY</th>
+                                    <th scope="col" id="useCntTblTitle">20대(남)</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th scope="row" id="useCountDate1">2021.05</th>
+                                    <td id="myUseCount1">58</td>
+                                    <td id="useCountCategory1">55</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" id="useCountDate2">2021.04</th>
+                                    <td id="myUseCount2">49</td>
+                                    <td id="useCountCategory2">54</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" id="useCountDate3">2021.03</th>
+                                    <td id="myUseCount3">80</td>
+                                    <td id="useCountCategory3">54</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" id="useCountDate4">2021.02</th>
+                                    <td id="myUseCount4">49</td>
+                                    <td id="useCountCategory4">47</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" id="useCountDate5">2021.01</th>
+                                    <td id="myUseCount5">73</td>
+                                    <td id="useCountCategory5">48</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <!-- // table-box -->
+                     </div>
+                  </div>
+                  <!-- // con1 -->
+                  <div role="tabpanel" aria-labelledby="tabBtn2" id="tabPanel2" class="con2">
+                     <h2>
+                        요일별
+                        <span class="cmm-tooltip caution" data-ui-toggle="box">
+                           <button type="button" data-role="none" class="cmm-btn-tooltip">안내</button>
+                           <div class="cmm-layer-round" data-ui-toggle="view">
+                              <button type="button" data-role="none" class="btn-close">닫기</button>
+                              <ul class="cmm-text-dot">
+                                 <li>위 정보는 대구은행 BC카드 승인데이터를 기준으로 합니다. </li>
+                                 <li>회원평균은 이용 월 기준입니다.</li>
+                                 <li>월초의 경우 데이터 집계에 오차가 있을 수 있습니다.</li>
+                              </ul>
+                           </div>
+                        </span>
+                     </h2>
+                     <div class="con">
+                        <div class="info-sort">
+                           <div class="sort">
+                              <button type="button" data-role="none" data-name="age" class="btn-sort active">20대(남)</button>
+                              <button type="button" data-role="none" data-name="area" class="btn-sort">경산시</button>
+                              <button type="button" data-role="none" data-name="all" class="btn-sort">전체고객</button>
+                           </div>
+                           <div class="cmm-form">
+                              <div class="ui-select">
+                                 <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" role="button" id="select-12-button" aria-haspopup="true" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" title="조회 월을 선택하세요"><span class="monthSel">2021년 05월</span></a>
+                                 <select data-native-menu="false" title="조회 월을 선택하세요" class="monthSel" tabindex="-1">
+                                    <option value="202105">2021년 05월</option>
+                                    <option value="202104">2021년 04월</option>
+                                    <option value="202103">2021년 03월</option>
+                                    <option value="202102">2021년 02월</option>
+                                    <option value="202101">2021년 01월</option>
+                                    <option value="202012">2020년 12월</option>
+                                 </select>
+                                 <div style="display: none;" id="select-12-listbox2-placeholder">
+                                    <!-- placeholder for select-12-listbox2 -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- // sort-box -->
+                        <div class="chart-box">
+                           <div class="tit">금액기준</div>
+                           <ul class="txt">
+                              <li class="nodata" style="display: none;"></li>
+                              <li><span class="name CUST_NM">test</span>님의 <span class="dayPrice_year">2021년 05월</span> 일평균 지출금액 <em id="dayPrice">43,211</em>원</li>
+                              <li><span id="dayPriceCate">20대(남)</span> <span class="dayPrice_year">2021년 05월</span> 일평균 지출금액 <em id="dayPriceEtc">26,547</em>원</li>
+                           </ul>
+                           <div class="chart animate" data-scroll="0.7">
+                              <div class="chartjs-size-monitor">
+                                 <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                 </div>
+                                 <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                 </div>
+                              </div>
+                              <canvas id="chartDayPrice" width="588" height="388" class="chartjs-render-monitor" style="display: block; height: 194px; width: 294px;"></canvas>
+                           </div>
+                        </div>
+                        <!-- // chart-box -->
+                        <div class="chart-box">
+                           <div class="tit">승인건기준</div>
+                           <div class="chart animate" data-scroll="0.7">
+                              <div class="chartjs-size-monitor">
+                                 <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                 </div>
+                                 <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                 </div>
+                              </div>
+                              <canvas id="chartDayApproval" width="588" height="388" class="chartjs-render-monitor" style="display: block; height: 194px; width: 294px;"></canvas>
+                           </div>
+                        </div>
+                        <!-- // chart-box -->
+                     </div>
+                  </div>
+                  <!-- // con2 -->
+                  <div role="tabpanel" aria-labelledby="tabBtn3" id="tabPanel3" class="con3">
+                     <h2>
+                        TOP10
+                        <span class="cmm-tooltip caution" data-ui-toggle="box">
+                           <button type="button" data-role="none" class="cmm-btn-tooltip">안내</button>
+                           <div class="cmm-layer-round" data-ui-toggle="view">
+                              <button type="button" data-role="none" class="btn-close">닫기</button>
+                              <ul class="cmm-text-dot">
+                                 <li>위 정보는 대구은행 BC카드 승인데이터를 기준으로 합니다. </li>
+                                 <li>회원평균은 이용 월 기준입니다.</li>
+                                 <li>월초의 경우 데이터 집계에 오차가 있을 수 있습니다.</li>
+                              </ul>
+                           </div>
+                        </span>
+                     </h2>
+                     <div class="con animate" data-scroll="0.7">
+                        <div class="info-sort">
+                           <div class="sort">
+                              <button type="button" data-role="none" data-name="my" class="btn-sort active">MY</button>
+                              <button type="button" data-role="none" data-name="age" class="btn-sort">20대(남)</button>
+                              <button type="button" data-role="none" data-name="area" class="btn-sort">경산시</button>
+                              <button type="button" data-role="none" data-name="all" class="btn-sort">전체고객</button>
+                           </div>
+                           <div class="cmm-form">
+                              <div class="ui-select">
+                                 <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" role="button" id="select-15-button" aria-haspopup="true" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" title="조회 월을 선택하세요"><span class="monthSel">2021년 05월</span></a>
+                                 <select data-native-menu="false" title="조회 월을 선택하세요" class="monthSel" tabindex="-1">
+                                    <option value="202105">2021년 05월</option>
+                                    <option value="202104">2021년 04월</option>
+                                    <option value="202103">2021년 03월</option>
+                                    <option value="202102">2021년 02월</option>
+                                    <option value="202101">2021년 01월</option>
+                                    <option value="202012">2020년 12월</option>
+                                 </select>
+                                 <div style="display: none;" id="select-15-listbox3-placeholder">
+                                    <!-- placeholder for select-15-listbox3 -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- // sort-box -->
+                        <div class="imshop-rank-box">
+                           <div class="tit">금액기준 이용가맹점 TOP10</div>
+                           <ol class="list top3ol" id="priceOrderList">
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">1</span>
+                                 <span class="name">이랜드리테일NC경산점</span>
+                                 </button>
+                              </li>
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">2</span>
+                                 <span class="name">고릴라캠핑</span>
+                                 </button>
+                              </li>
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">3</span>
+                                 <span class="name">Amazon_AWS</span>
+                                 </button>
+                              </li>
+                           </ol>
+                           <ol style="display:none;" id="priceOrderHidden">
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">1</span>
+                                 <span class="name">-</span>
+                                 </button>
+                              </li>
+                           </ol>
+                           <div class="cmm-text-datanone top3Accnodata" style="display:none;">
+                              <p class="txt">승인내역이 없습니다.</p>
+                           </div>
+                           <button type="button" data-role="none" class="cmm-btn-more top10more1" style="">더보기</button>
+                        </div>
+                        <!-- // imshop-rank-box -->
+                        <div class="imshop-rank-box">
+                           <div class="tit">건수기준 이용가맹점 TOP10</div>
+                           <ol class="list top3ol" id="cntOrderList">
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">1</span>
+                                 <span class="name">GS25옥곡동화점</span>
+                                 </button>
+                              </li>
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">2</span>
+                                 <span class="name">Amazon_AWS</span>
+                                 </button>
+                              </li>
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">3</span>
+                                 <span class="name">(주)신세계푸드 대구은행DIC</span>
+                                 </button>
+                              </li>
+                           </ol>
+                           <ol style="display:none;" id="cntOrderHidden">
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">1</span>
+                                 <span class="name">-</span>
+                                 </button>
+                              </li>
+                           </ol>
+                           <div class="cmm-text-datanone top3ACntodata" style="display:none;">
+                              <p class="txt">승인내역이 없습니다.</p>
+                           </div>
+                           <button type="button" data-role="none" class="cmm-btn-more top10more2" style="">더보기</button>
+                        </div>
+                        <!-- // imshop-rank-box -->
+                     </div>
+                  </div>
+                  <!-- // con3 -->
+                  <div role="tabpanel" aria-labelledby="tabBtn4" id="tabPanel4" class="con4">
+                     <h2>
+                        업종별
+                        <span class="cmm-tooltip caution" data-ui-toggle="box">
+                           <button type="button" data-role="none" class="cmm-btn-tooltip">안내</button>
+                           <div class="cmm-layer-round" data-ui-toggle="view">
+                              <button type="button" data-role="none" class="btn-close">닫기</button>
+                              <ul class="cmm-text-dot">
+                                 <li>위 정보는 대구은행 BC카드 승인데이터를 기준으로 합니다. </li>
+                                 <li>회원평균은 이용 월 기준입니다.</li>
+                                 <li>월초의 경우 데이터 집계에 오차가 있을 수 있습니다.</li>
+                              </ul>
+                           </div>
+                        </span>
+                     </h2>
+                     <div class="con">
+                        <div class="info-sort">
+                           <div class="sort">
+                              <button type="button" data-role="none" data-name="my" class="btn-sort active">MY</button>
+                              <button type="button" data-role="none" data-name="age" class="btn-sort">20대(남)</button>
+                              <button type="button" data-role="none" data-name="area" class="btn-sort">경산시</button>
+                              <button type="button" data-role="none" data-name="all" class="btn-sort">전체고객</button>
+                           </div>
+                           <div class="cmm-form">
+                              <div class="ui-select">
+                                 <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" role="button" id="select-18-button" aria-haspopup="true" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" title="조회 월을 선택하세요"><span class="monthSel">2021년 05월</span></a>
+                                 <select data-native-menu="false" title="조회 월을 선택하세요" class="monthSel" tabindex="-1">
+                                    <option value="202105">2021년 05월</option>
+                                    <option value="202104">2021년 04월</option>
+                                    <option value="202103">2021년 03월</option>
+                                    <option value="202102">2021년 02월</option>
+                                    <option value="202101">2021년 01월</option>
+                                    <option value="202012">2020년 12월</option>
+                                 </select>
+                                 <div style="display: none;" id="select-18-listbox4-placeholder">
+                                    <!-- placeholder for select-18-listbox4 -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- // sort-box -->
+                        <div class="chart-box">
+                           <div class="tit">주사용 업종</div>
+                           <ul class="txt">
+                              <li class="nodata" style="display:none;">고객님의 대구은행 BC카드 이용내역이 없습니다.</li>
+                              <li class="con4_title"><span class="name CUST_NM">test</span>님은 <span class="doughnut_year">2021년 05월</span> <strong id="doughnutTop">쇼핑</strong>업종에 가장 많은 지출을 하고 계십니다.</li>
+                           </ul>
+                           <div class="chart Doughnut animate draw" data-scroll="0.7">
+                              <div class="chartjs-size-monitor">
+                                 <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                 </div>
+                                 <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                 </div>
+                              </div>
+                              <canvas id="chartDoughnut" width="324" height="388" class="chartjs-render-monitor" style="display: block; height: 194px; width: 162px;"></canvas>
+                              <div class="legend">
+                                 <ul>
+                                    <li style="border-color:#95cf6a"><span class="name">쇼핑</span><span class="percent"><em>57</em>%</span></li>
+                                    <li style="border-color:#587989"><span class="name">여가/여행</span><span class="percent"><em>25</em>%</span></li>
+                                    <li style="border-color:#7ea19f"><span class="name">외식</span><span class="percent"><em>16</em>%</span></li>
+                                    <li style="border-color:#00d7e8"><span class="name">건강</span><span class="percent"><em>1</em>%</span></li>
+                                    <li style="border-color:#b79fe6"><span class="name">기타</span><span class="percent"><em>1</em>%</span></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="cmm-text-datanone doughnutnodata" style="display:none;">
+                              <p class="txt">승인내역이 없습니다.</p>
+                           </div>
+                        </div>
+                        <!-- // chart-box -->
+                        <div class="chart-box small">
+                           <div class="tit">TOP3 세부업종</div>
+                           <ul class="txt">
+                              <li class="nodata" style="display:none;">고객님의 대구은행 BC카드 이용내역이 없습니다.</li>
+                              <li class="con4_title"><span class="name CUST_NM">test</span>님의 <span class="doughnut_year">2021년 05월</span> <strong id="doughnutDtlTop">유통업영리</strong>업종에 가장 많은 지출을 하고 계십니다.</li>
+                           </ul>
+                           <div class="chart DoughnutDetail animate draw" data-scroll="0.7">
+                              <div class="chartjs-size-monitor">
+                                 <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                 </div>
+                                 <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                 </div>
+                              </div>
+                              <canvas id="chartBar" width="588" height="300" class="chartjs-render-monitor" style="display: block; height: 150px; width: 294px;"></canvas>
+                           </div>
+                           <div class="cmm-text-datanone doughnutnodata" style="display:none;">
+                              <p class="txt">승인내역이 없습니다.</p>
+                           </div>
+                        </div>
+                        <!-- // chart-box -->
+                     </div>
+                  </div>
+                  <!-- // con4 -->
+                  <div role="tabpanel" aria-labelledby="tabBtn5" id="tabPanel5" class="con5 animate" data-scroll="0.7">
+                     <h2>
+                        지역별
+                        <span class="cmm-tooltip caution" data-ui-toggle="box">
+                           <button type="button" data-role="none" class="cmm-btn-tooltip">안내</button>
+                           <div class="cmm-layer-round" data-ui-toggle="view">
+                              <button type="button" data-role="none" class="btn-close">닫기</button>
+                              <ul class="cmm-text-dot">
+                                 <li>위 정보는 대구은행 BC카드 승인데이터를 기준으로 합니다. </li>
+                                 <li>회원평균은 이용 월 기준입니다.</li>
+                                 <li>월초의 경우 데이터 집계에 오차가 있을 수 있습니다.</li>
+                              </ul>
+                           </div>
+                        </span>
+                     </h2>
+                     <div class="con">
+                        <div class="info-sort">
+                           <div class="sort">
+                              <button type="button" data-role="none" data-name="age" class="btn-sort active">20대(남)</button>
+                              <button type="button" data-role="none" data-name="area" class="btn-sort">경산시</button>
+                              <button type="button" data-role="none" data-name="all" class="btn-sort">전체고객</button>
+                           </div>
+                           <div class="cmm-form">
+                              <div class="ui-select">
+                                 <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" role="button" id="con5MonthSel-button" aria-haspopup="true" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" title="조회 월을 선택하세요"><span class="monthSel">2021년 05월</span></a>
+                                 <select data-native-menu="false" title="조회 월을 선택하세요" class="monthSel" id="con5MonthSel" tabindex="-1">
+                                    <option value="202105">2021년 05월</option>
+                                    <option value="202104">2021년 04월</option>
+                                    <option value="202103">2021년 03월</option>
+                                    <option value="202102">2021년 02월</option>
+                                    <option value="202101">2021년 01월</option>
+                                    <option value="202012">2020년 12월</option>
+                                 </select>
+                                 <div style="display: none;" id="con5MonthSel-listbox5-placeholder">
+                                    <!-- placeholder for con5MonthSel-listbox5 -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- // sort-box -->
+                        <div style="display:none" id="_hiddenLocal">
+                           <table>
+                              <tbody>
+                                 <tr>
+                                    <th scope="row" class="addr">서울시 종로구 필동</th>
+                                    <td class="totalAmt">1,234,000</td>
+                                    <td class="totalCnt">50</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="table-box">
+                           <div class="tit"><span class="name CUST_NM">test</span>님 사용처</div>
+                           <table id="con5MyList">
+                              <caption>MY 지역별 사용처를 구분, 이용금액, 건수로 나타낸 표</caption>
+                              <colgroup>
+                                 <col style="width:50%">
+                                 <col style="width:30%">
+                                 <col style="width:20%">
+                              </colgroup>
+                              <thead>
+                                 <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">이용금액</th>
+                                    <th scope="col">건수</th>
+                                 </tr>
+                              </thead>
+                              <tbody id="_repeatMyLocalArea">
+                                 <tr>
+                                    <th scope="row" class="addr">경상북도 경산시 옥곡동</th>
+                                    <td class="totalAmt">156,200</td>
+                                    <td class="totalCnt">17</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="addr">대구광역시 동구 봉무동</th>
+                                    <td class="totalAmt">462,350</td>
+                                    <td class="totalCnt">12</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="addr">대구광역시 수성구 두산동</th>
+                                    <td class="totalAmt">27,000</td>
+                                    <td class="totalCnt">5</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <button type="button" data-role="none" class="cmm-btn-more myLocMore" style="">더보기</button>
+                        </div>
+                        <!-- // table-box -->
+                        <div class="table-box">
+                           <div class="tit"><span class="loc_title">20대(남) 지역별</span> 사용처</div>
+                           <table id="con5List">
+                              <caption>동일연령대 지역별 사용처를 구분, 이용금액, 건수로 나타낸 표</caption>
+                              <colgroup>
+                                 <col style="width:50%">
+                                 <col style="width:30%">
+                                 <col style="width:20%">
+                              </colgroup>
+                              <thead>
+                                 <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">이용금액</th>
+                                    <th scope="col">건수</th>
+                                 </tr>
+                              </thead>
+                              <tbody id="_repeatLocalArea">
+                                 <tr>
+                                    <th scope="row" class="addr">대구광역시 수성구 범어동</th>
+                                    <td class="totalAmt">846,089,013</td>
+                                    <td class="totalCnt">109,158</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="addr">서울특별시 강남구 역삼동</th>
+                                    <td class="totalAmt">1,216,158,174</td>
+                                    <td class="totalCnt">53,575</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row" class="addr">서울특별시 마포구 아현동</th>
+                                    <td class="totalAmt">858,871,234</td>
+                                    <td class="totalCnt">44,332</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <button type="button" data-role="none" class="cmm-btn-more otherLocMore" style="">더보기</button>
+                        </div>
+                        <!-- // table-box -->
+                     </div>
+                  </div>
+                  <!-- // con5 -->
+                  <div role="tabpanel" aria-labelledby="tabBtn6" id="tabPanel6" class="con6 animate" data-scroll="0.7">
+                     <h2>
+                        카드안내
+                        <span class="cmm-tooltip caution" data-ui-toggle="box">
+                           <button type="button" data-role="none" class="cmm-btn-tooltip">안내</button>
+                           <div class="cmm-layer-round" data-ui-toggle="view">
+                              <button type="button" data-role="none" class="btn-close">닫기</button>
+                              <ul class="cmm-text-dot">
+                                 <li>위 정보는 대구은행 BC카드 승인데이터를 기준으로 합니다. </li>
+                                 <li>회원평균은 이용 월 기준입니다.</li>
+                                 <li>월초의 경우 데이터 집계에 오차가 있을 수 있습니다.</li>
+                              </ul>
+                           </div>
+                        </span>
+                     </h2>
+                     <div class="con">
+                        <div class="info-sort">
+                           <div class="sort">
+                              <button type="button" data-role="none" data-name="age" class="btn-sort active">20대(남)</button>
+                              <button type="button" data-role="none" data-name="area" class="btn-sort">경산시</button>
+                              <button type="button" data-role="none" data-name="all" class="btn-sort">전체고객</button>
+                           </div>
+                           <div class="cmm-form">
+                              <div class="ui-select">
+                                 <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" role="button" id="con6MonthSel-button" aria-haspopup="true" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" title="조회 월을 선택하세요"><span class="monthSel">2021년 05월</span></a>
+                                 <select data-native-menu="false" title="조회 월을 선택하세요" class="monthSel" id="con6MonthSel" tabindex="-1">
+                                    <option value="202105">2021년 05월</option>
+                                    <option value="202104">2021년 04월</option>
+                                    <option value="202103">2021년 03월</option>
+                                    <option value="202102">2021년 02월</option>
+                                    <option value="202101">2021년 01월</option>
+                                    <option value="202012">2020년 12월</option>
+                                 </select>
+                                 <div style="display: none;" id="con6MonthSel-listbox6-placeholder">
+                                    <!-- placeholder for con6MonthSel-listbox6 -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- // sort-box -->
+                        <div id="_hiddenCard" style="display:none">
+                           <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none" class="cardLink">
+                              <div class="img-box cardImg"><img src="https://mbanking.dgb.co.kr/img/sbs/@draft/card01.jpg" alt="DGB ONE카드 이미지"></div>
+                              <div class="txt-box">
+                                 <p class="tit"><em class="cardName">DGB ONE카드</em></p>
+                                 <p class="txt"><em class="cardDesc">어디서나 간편하게 누리는 할인 혜택! 세븐 캐쉬백 카드 할인(캐시백)</em></p>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="cmm-list-img-card">
+                           <div class="top-box">
+                              <p class="tit"><span class="name CUST_NM">test</span>님 보유카드</p>
+                           </div>
+                           <div class="list" id="_repeatMyCardArea">
+                              <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none" class="cardLink">
+                                 <div class="img-box cardImg"><img src="https://www.dgb.co.kr//img/fnm/40100101700840000.gif" alt="Master Y+(영플러스) 체크카드"></div>
+                                 <div class="txt-box">
+                                    <p class="tit"><em class="cardName">Master Y+(영플러스) 체크카드</em></p>
+                                    <p class="txt"><em class="cardDesc">Y+체크카드의 다양한 서비스에 해외가맹점 이용은 물론 인터넷 해외직구까지 가능한 Y+ 마스터체크</em></p>
+                                 </div>
+                              </a>
+                           </div>
+                           <button type="button" data-role="none" class="cmm-btn-more myCardMore" style="display:none;">더보기</button>
+                        </div>
+                        <!-- // cmm-list-img-card -->
+                        <div class="cmm-list-img-card">
+                           <div class="top-box">
+                              <p class="tit"><span class="card_title">20대(남)</span> 인기카드</p>
+                              <div class="list-tab">
+                                 <button type="button" data-role="none" class="active orderby" data-name="CRYM_APRVL_NCSE">이용건수</button>
+                                 <button type="button" data-role="none" class="orderby" data-name="APRVL_AMT">이용금액</button>
+                              </div>
+                           </div>
+                           <div class="list" id="_repeatCardArea">
+                              <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none" class="cardLink">
+                                 <div class="img-box cardImg"><img src="https://www.dgb.co.kr//img/fnm/40100101700840000.gif" alt="Master Y+(영플러스) 체크카드"></div>
+                                 <div class="txt-box">
+                                    <p class="tit"><em class="cardName">Master Y+(영플러스) 체크카드</em></p>
+                                    <p class="txt"><em class="cardDesc">Y+체크카드의 다양한 서비스에 해외가맹점 이용은 물론 인터넷 해외직구까지 가능한 Y+ 마스터체크</em></p>
+                                 </div>
+                              </a>
+                              <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none" class="cardLink">
+                                 <div class="img-box cardImg"><img src="https://www.dgb.co.kr//img/fnm/40100101700822000.gif" alt="Y+ (영플러스) 체크카드(대경교통)"></div>
+                                 <div class="txt-box">
+                                    <p class="tit"><em class="cardName">Y+ (영플러스) 체크카드(대경교통)</em></p>
+                                    <p class="txt"><em class="cardDesc">즐길 줄 아는 사람들의 문화아이콘 Y+ </em></p>
+                                 </div>
+                              </a>
+                              <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none" class="cardLink">
+                                 <div class="img-box cardImg"><img src="https://www.dgb.co.kr//img/fnm/40100101700540000.png" alt="단디체크카드"></div>
+                                 <div class="txt-box">
+                                    <p class="tit"><em class="cardName">단디체크카드</em></p>
+                                    <p class="txt"><em class="cardDesc">경상도에 산다면....단디 체크 하세요!! </em></p>
+                                 </div>
+                              </a>
+                           </div>
+                           <button type="button" data-role="none" class="cmm-btn-more otherCardMore" style="">더보기</button>
+                        </div>
+                        <!-- // cmm-list-img-card -->
+                     </div>
+                  </div>
+                  <!-- // con6 -->
+                  <div role="tabpanel" aria-labelledby="tabBtn7" id="tabPanel7" class="con7 animate" data-scroll="0.7">
+                     <h2>HOT IM샵</h2>
+                     <div class="con">
+                        <div class="life-list-thumb-box">
+                           <div class="location">
+                              <button type="button" data-role="none"><strong id="sido_shop" value="" class="sidobtn"><strong>대구광역시</strong></strong></button>
+                              <button type="button" data-role="none" id="gungu_shop" value="" class="gugunbtn">시/군/구</button>
+                              <span id="dong_shop" value="" class="dongbtn">읍/면/동</span>
+                              <div class="cmm-btn-box-right">
+                                 <button type="button" data-role="none" class="cmm-btn-location" data-loctype="_shop" name="addrCancel">내위치</button>
+                                 <button type="button" data-role="none" class="cmm-btn-location-change" data-loctype="_shop" name="locChangePop">변경</button>
+                              </div>
+                              <!-- <div class="cmm-btn-box-right">// 2020-09-07 추가
+                                 <button type="button" data-role="none" id="addrCancel_shop" name="addrCancel" class="cmm-btn-gray-line shop">현재 위치</button>
+                                 </div> -->
+                           </div>
+                           <div class="list-tab" style="top: 0.04rem;">
+                              <button type="button" data-role="none" data-order_col="CRYM_APRVL_NCSE" id="btn_cnt" class="active">이용건수</button>
+                              <button type="button" data-role="none" data-order_col="APRVL_AMT" id="btn_amt">이용금액</button>
+                           </div>
+                           <div class="list block" id="_shop_list">
+                              <div class="_row_data">
+                                 <div class="thumb goDetailPage">
+                                    <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none"><img class="thumbShpPho" src="https://mbanking.dgb.co.kr/com_ebz_ims_r201.act?SHOP_PHO_ID=4137&amp;BBS_IMG_WTH_SIZE_VAL=200" alt="샵 대표이미지(기본이미지)"></a>
+                                    <div class="tag-box">
+                                       <span class="pay" style="display: none;">제로페이</span>
+                                       <span class="paybooc" style="display: none;">페이북</span>
+                                       <span class="happy" style="display: inline;">행복페이</span>
+                                       <span class="pohang" style="display:none">포항사랑</span>
+                                    </div>
+                                 </div>
+                                 <div class="info2">
+                                    <p class="tit goDetailPage"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none" class="view_FR_NM">대백마트중리점</a><span class="distance">0m</span></p>
+                                    <p class="txt2 VILG_ABV_ADDR">대구광역시 서구 국채보상로34길 40 (중리동)</p>
+                                    <p class="txt point">
+                                       <span class="point"><em class="newsCoupClass"></em></span>
+                                       <span class="like view_INTER_CNT">0</span>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="_row_data">
+                                 <div class="thumb goDetailPage">
+                                    <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none"><img class="thumbShpPho" src="https://mbanking.dgb.co.kr/com_ebz_ims_r201.act?SHOP_PHO_ID=4136&amp;BBS_IMG_WTH_SIZE_VAL=200" alt="샵 대표이미지(기본이미지)"></a>
+                                    <div class="tag-box">
+                                       <span class="pay" style="display: none;">제로페이</span>
+                                       <span class="paybooc" style="display: none;">페이북</span>
+                                       <span class="happy" style="display: inline;">행복페이</span>
+                                       <span class="pohang" style="display:none">포항사랑</span>
+                                    </div>
+                                 </div>
+                                 <div class="info2">
+                                    <p class="tit goDetailPage"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none" class="view_FR_NM">대백마트 이곡점</a><span class="distance">0m</span></p>
+                                    <p class="txt2 VILG_ABV_ADDR">대구광역시 달서구 이곡공원로 38 (이곡동)</p>
+                                    <p class="txt point">
+                                       <span class="point"><em class="newsCoupClass"></em></span>
+                                       <span class="like view_INTER_CNT">1</span>
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- 샵 hidden  리스트 -->
+                           <div class="_hiddenArea" style="display: none;">
+                              <div class="_row_data">
+                                 <div class="thumb goDetailPage">
+                                    <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none"><img class="thumbShpPho" src="https://mbanking.dgb.co.kr/img/sbs/imshop/imshop_thumb_default.png" alt="샵 대표이미지(기본이미지)"></a>
+                                    <div class="tag-box">
+                                       <span class="pay">제로페이</span>
+                                       <span class="paybooc">페이북</span>
+                                       <span class="happy" style="display:none">행복페이</span>
+                                       <span class="pohang" style="display:none">포항사랑</span>
+                                    </div>
+                                 </div>
+                                 <div class="info2">
+                                    <p class="tit goDetailPage"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" data-role="none" class="view_FR_NM"></a><span class="distance"></span></p>
+                                    <p class="txt2 VILG_ABV_ADDR"></p>
+                                    <p class="txt point">
+                                       <span class="point"><em class="newsCoupClass"></em></span>
+                                       <span class="like view_INTER_CNT"></span>
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- // life-list-thumb-box -->
+                     </div>
+                  </div>
+                  <!-- // con7 -->
+                  <div role="tabpanel" aria-labelledby="tabBtn8" id="tabPanel8" class="con8 animate" data-scroll="0.7">
+                     <h2>인기가맹점</h2>
+                     <div class="con" style="min-height: 450px;">
+                        <div class="life-list-thumb-box">
+                           <div class="location">
+                              <button type="button" data-role="none"><strong id="sido_around" value="" class="sidobtn"><strong>대구광역시</strong></strong></button>
+                              <button type="button" data-role="none" id="gungu_around" value="" class="gugunbtn">시/군/구</button>
+                              <span id="dong_around" value="" class="dongbtn">읍/면/동</span>
+                              <div class="cmm-btn-box-right">
+                                 <button type="button" data-role="none" class="cmm-btn-location" data-loctype="_around" name="addrCancel">내위치</button>
+                                 <button type="button" data-role="none" class="cmm-btn-location-change" data-loctype="_around" name="locChangePop">변경</button>
+                              </div>
+                              <!-- <div class="cmm-btn-box-right">// 2020-09-07 추가
+                                 <button type="button" data-role="none" id="addrCancel_around" name="addrCancel" class="cmm-btn-gray-line around">현재 위치</button>
+                                 </div> -->
+                           </div>
+                           <div class="list-tab" style="top: 0.04rem;">
+                              <div class="ui-select">
+                                 <a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" role="button" id="select-27-button" aria-haspopup="true" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" title="조회 월을 선택하세요"><span class="monthSel" style="border-bottom: none;">2021년 05월</span></a>
+                                 <select data-native-menu="false" title="조회 월을 선택하세요" class="monthSel" tabindex="-1">
+                                    <option value="202105">2021년 05월</option>
+                                    <option value="202104">2021년 04월</option>
+                                    <option value="202103">2021년 03월</option>
+                                    <option value="202102">2021년 02월</option>
+                                    <option value="202101">2021년 01월</option>
+                                    <option value="202012">2020년 12월</option>
+                                 </select>
+                                 <div style="display: none;" id="select-27-listbox7-placeholder">
+                                    <!-- placeholder for select-27-listbox7 -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- // life-list-thumb-box -->
+                        <div class="imshop-rank-box">
+                           <div class="tit">금액기준 인기가맹점</div>
+                           <ol class="list aroundOl" id="aroundPriceList">
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">1</span>
+                                 <span class="name">신세계 대구점</span>
+                                 </button>
+                              </li>
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">2</span>
+                                 <span class="name">대백프라자</span>
+                                 </button>
+                              </li>
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">3</span>
+                                 <span class="name">동아백화점 쇼핑점</span>
+                                 </button>
+                              </li>
+                           </ol>
+                           <ol style="display:none;" id="aroundPriceHidden">
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">1</span>
+                                 <span class="name">-</span>
+                                 </button>
+                              </li>
+                           </ol>
+                           <div class="cmm-text-datanone aroundAccnodata" style="display: none;">
+                              <p class="txt">승인내역이 없습니다.</p>
+                           </div>
+                           <button type="button" data-role="none" class="cmm-btn-more aroundmore1" style="">더보기</button>
+                        </div>
+                        <!-- // imshop-rank-box -->
+                        <div class="imshop-rank-box">
+                           <div class="tit">건수기준 인기가맹점</div>
+                           <ol class="list aroundOl" id="aroundCountList">
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">1</span>
+                                 <span class="name">디지비유페이택시개인1</span>
+                                 </button>
+                              </li>
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">2</span>
+                                 <span class="name">DGB유페이 택시</span>
+                                 </button>
+                              </li>
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">3</span>
+                                 <span class="name">카카오페이(택시)7</span>
+                                 </button>
+                              </li>
+                           </ol>
+                           <ol style="display:none;" id="aroundCountHidden">
+                              <li>
+                                 <button type="button" data-role="none">
+                                 <span class="num">1</span>
+                                 <span class="name">-</span>
+                                 </button>
+                              </li>
+                           </ol>
+                           <div class="cmm-text-datanone aroundACntodata" style="display: none;">
+                              <p class="txt">승인내역이 없습니다.</p>
+                           </div>
+                           <button type="button" data-role="none" class="cmm-btn-more aroundmore2" style="">더보기</button>
+                        </div>
+                        <!-- // imshop-rank-box -->
+                     </div>
+                  </div>
+                  <!-- // con8 -->
+               </div>
+               <!-- // tab-contents -->
+            </div>
+            <!-- // imshop-analysis -->
+         </section>
+         <div class="ui-screen-hidden ui-popup-screen ui-overlay-inherit" id="select-9-listbox1-screen"></div>
+         <div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="select-9-listbox1-popup">
+            <div id="select-9-listbox1" class="ui-selectmenu ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+               <div class="ui-header ui-bar-inherit">
+                  <h1 class="ui-title">선택하세요</h1>
+               </div>
+               <ul class="ui-selectmenu-list ui-listview" id="select-9-menu" role="listbox" aria-labelledby="select-9-button">
+                  <li data-option-index="0" data-icon="false" class="ui-first-child" role="option" aria-selected="true"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn ui-btn-active">2021년 05월</a></li>
+                  <li data-option-index="1" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 04월</a></li>
+                  <li data-option-index="2" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 03월</a></li>
+                  <li data-option-index="3" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 02월</a></li>
+                  <li data-option-index="4" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 01월</a></li>
+                  <li data-option-index="5" data-icon="false" class="ui-last-child" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2020년 12월</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="ui-screen-hidden ui-popup-screen ui-overlay-inherit" id="select-12-listbox2-screen"></div>
+         <div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="select-12-listbox2-popup">
+            <div id="select-12-listbox2" class="ui-selectmenu ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+               <div class="ui-header ui-bar-inherit">
+                  <h1 class="ui-title">선택하세요</h1>
+               </div>
+               <ul class="ui-selectmenu-list ui-listview" id="select-12-menu" role="listbox" aria-labelledby="select-12-button">
+                  <li data-option-index="0" data-icon="false" class="ui-first-child" role="option" aria-selected="true"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn ui-btn-active">2021년 05월</a></li>
+                  <li data-option-index="1" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 04월</a></li>
+                  <li data-option-index="2" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 03월</a></li>
+                  <li data-option-index="3" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 02월</a></li>
+                  <li data-option-index="4" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 01월</a></li>
+                  <li data-option-index="5" data-icon="false" class="ui-last-child" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2020년 12월</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="ui-screen-hidden ui-popup-screen ui-overlay-inherit" id="select-15-listbox3-screen"></div>
+         <div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="select-15-listbox3-popup">
+            <div id="select-15-listbox3" class="ui-selectmenu ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+               <div class="ui-header ui-bar-inherit">
+                  <h1 class="ui-title">선택하세요</h1>
+               </div>
+               <ul class="ui-selectmenu-list ui-listview" id="select-15-menu" role="listbox" aria-labelledby="select-15-button">
+                  <li data-option-index="0" data-icon="false" class="ui-first-child" role="option" aria-selected="true"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn ui-btn-active">2021년 05월</a></li>
+                  <li data-option-index="1" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 04월</a></li>
+                  <li data-option-index="2" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 03월</a></li>
+                  <li data-option-index="3" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 02월</a></li>
+                  <li data-option-index="4" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 01월</a></li>
+                  <li data-option-index="5" data-icon="false" class="ui-last-child" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2020년 12월</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="ui-screen-hidden ui-popup-screen ui-overlay-inherit" id="select-18-listbox4-screen"></div>
+         <div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="select-18-listbox4-popup">
+            <div id="select-18-listbox4" class="ui-selectmenu ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+               <div class="ui-header ui-bar-inherit">
+                  <h1 class="ui-title">선택하세요</h1>
+               </div>
+               <ul class="ui-selectmenu-list ui-listview" id="select-18-menu" role="listbox" aria-labelledby="select-18-button">
+                  <li data-option-index="0" data-icon="false" class="ui-first-child" role="option" aria-selected="true"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn ui-btn-active">2021년 05월</a></li>
+                  <li data-option-index="1" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 04월</a></li>
+                  <li data-option-index="2" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 03월</a></li>
+                  <li data-option-index="3" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 02월</a></li>
+                  <li data-option-index="4" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 01월</a></li>
+                  <li data-option-index="5" data-icon="false" class="ui-last-child" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2020년 12월</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="ui-screen-hidden ui-popup-screen ui-overlay-inherit" id="con5MonthSel-listbox5-screen"></div>
+         <div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="con5MonthSel-listbox5-popup">
+            <div id="con5MonthSel-listbox5" class="ui-selectmenu ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+               <div class="ui-header ui-bar-inherit">
+                  <h1 class="ui-title">선택하세요</h1>
+               </div>
+               <ul class="ui-selectmenu-list ui-listview" id="con5MonthSel-menu" role="listbox" aria-labelledby="con5MonthSel-button">
+                  <li data-option-index="0" data-icon="false" class="ui-first-child" role="option" aria-selected="true"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn ui-btn-active">2021년 05월</a></li>
+                  <li data-option-index="1" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 04월</a></li>
+                  <li data-option-index="2" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 03월</a></li>
+                  <li data-option-index="3" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 02월</a></li>
+                  <li data-option-index="4" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 01월</a></li>
+                  <li data-option-index="5" data-icon="false" class="ui-last-child" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2020년 12월</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="ui-screen-hidden ui-popup-screen ui-overlay-inherit" id="con6MonthSel-listbox6-screen"></div>
+         <div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="con6MonthSel-listbox6-popup">
+            <div id="con6MonthSel-listbox6" class="ui-selectmenu ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+               <div class="ui-header ui-bar-inherit">
+                  <h1 class="ui-title">선택하세요</h1>
+               </div>
+               <ul class="ui-selectmenu-list ui-listview" id="con6MonthSel-menu" role="listbox" aria-labelledby="con6MonthSel-button">
+                  <li data-option-index="0" data-icon="false" class="ui-first-child" role="option" aria-selected="true"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn ui-btn-active">2021년 05월</a></li>
+                  <li data-option-index="1" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 04월</a></li>
+                  <li data-option-index="2" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 03월</a></li>
+                  <li data-option-index="3" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 02월</a></li>
+                  <li data-option-index="4" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 01월</a></li>
+                  <li data-option-index="5" data-icon="false" class="ui-last-child" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2020년 12월</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="ui-screen-hidden ui-popup-screen ui-overlay-inherit" id="select-27-listbox7-screen"></div>
+         <div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="select-27-listbox7-popup">
+            <div id="select-27-listbox7" class="ui-selectmenu ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+               <div class="ui-header ui-bar-inherit">
+                  <h1 class="ui-title">선택하세요</h1>
+               </div>
+               <ul class="ui-selectmenu-list ui-listview" id="select-27-menu" role="listbox" aria-labelledby="select-27-button">
+                  <li data-option-index="0" data-icon="false" class="ui-first-child" role="option" aria-selected="true"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn ui-btn-active">2021년 05월</a></li>
+                  <li data-option-index="1" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 04월</a></li>
+                  <li data-option-index="2" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 03월</a></li>
+                  <li data-option-index="3" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 02월</a></li>
+                  <li data-option-index="4" data-icon="false" class="" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2021년 01월</a></li>
+                  <li data-option-index="5" data-icon="false" class="ui-last-child" role="option" aria-selected="false"><a href="https://mbanking.dgb.co.kr/com_ebz_ims_00001.act#" tabindex="-1" class="ui-btn">2020년 12월</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+   </body>
+</html>
